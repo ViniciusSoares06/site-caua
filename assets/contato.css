@@ -1,0 +1,193 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+:root {
+    --purple: #6c63ff;
+    --bege: #fde3a7d7;
+    --white: #fff;
+    --dark: #1e1c2a;
+    --green: #008653;
+}
+
+body {
+    color: var(--dark);
+    background: var(--white);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s;
+    position: fixed;
+}
+
+.navigation .logo {
+    color: var(--purple);
+    font-size: 1.7rem;
+    font-weight: 600;
+    list-style: none;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li a {
+    color:var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navigation ul li a:hover {
+    color: var(--purple);
+}
+
+.trilho {
+    width: 80px;
+    height: 40px;
+    background-color: var(--dark);
+    border-radius: 150px;
+    position: relative;
+    cursor: pointer;
+}
+
+.trilho .indicador {
+    width: 40px;
+    height: 40px;
+    background-color: var(--white);
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.darkf {
+    background-color: #1e1c2a;
+}
+
+.trilho.darkf .indicador {
+    left: 40px;
+    background-color: #000;
+} 
+
+body.darkf{
+    background-color: #1e1c2a;
+    color: var(--white);
+}
+
+
+
+.navigation img {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3) {
+    background: var(--purple);
+}
+
+.menu .bar:nth-child(2) {
+    background: var(--green);
+}
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+.interface {
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.title span {
+    color: var(--purple);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: var(--dark);
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: var(--white);
+    font-size: 18px;
+}
+
+form input::placeholder {
+    color: var(--white)
+}
+
+form textarea {
+    resize: none;
+    color: var(--white);
+    max-height: 200px;
+}
+
+form .envio_btn {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .envio_btn input[type=submit] {
+    width: 120px;
+    background-color: var(--purple);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+form .envio_btn input:hover {
+    box-shadow: 0px 0px 8px #6b63fff1;
+    transform: scale(1.05);
+}
